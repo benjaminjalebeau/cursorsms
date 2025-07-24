@@ -1,0 +1,21 @@
+# File Types in This Project
+
+The following file types are present in your project:
+
+| Extension    | Files                          |
+|--------------|-------------------------------|
+| .js          | server.js, watcher.js          |
+| .json        | package.json, package-lock.json|
+| .ahk         | cursor_input.ahk               |
+| .txt         | input.txt, output.txt          |
+| .md          | README.md                      |
+| (none)       | .gitignore                     |
+
+- `.js`   — JavaScript source files
+- `.json` — Node.js package and lock files
+- `.ahk`  — AutoHotkey script
+- `.txt`  — Plain text input/output
+- `.md`   — Markdown documentation
+- (none)  — Special files like `.gitignore`
+
+There is also a `node_modules/` directory containing installed dependencies (not listed individually).
