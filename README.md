@@ -42,10 +42,15 @@ A bridge between Twilio SMS/WhatsApp and your local environment opened in a curs
    TWILIO_PHONE_NUMBER_SMS=+1234567890
    TWILIO_PHONE_NUMBER_WHATSAPP=whatsapp:+1234567890
    ```
-3. **Set up Twilio Webhook**:
+3. **Configure output and input file paths in ahk script in cursor_input.ahk
+   ```ahk
+   InputFile :=enter path to .txt file 
+   OutputFile :=enter path to .txt file
+   ```
+4. **Set up Twilio Webhook**:
    - Point your Twilio SMS/WhatsApp webhook to `http://<your-server>:3000/sms` (use [ngrok](https://ngrok.com/) for local development).
 
-4. **Start the services**:
+5. **Start the services**:
    - Start the Node.js server:
      ```bash
      node server.js
@@ -68,7 +73,7 @@ A bridge between Twilio SMS/WhatsApp and your local environment opened in a curs
 1. User sends: `Can you check to see if my packages are up to date.?`
 2. `input.txt` receives:
    ```
-   can you draft me a readme file?
+   Can you check to see if my packages are up to date?
    ```
 3. The AHK script triggers, pastes the message into the "Cursor" app, and waits for a response.
 4. Once the response is written to `output.txt`, it is sent back to the user via Twilio.
