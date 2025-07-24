@@ -1,6 +1,6 @@
 # CursorSMS
 
-A bridge between Twilio SMS/WhatsApp and your local environment, enabling automated responses using a local process (e.g., AI or script) via file-based communication and AutoHotkey scripting.
+A bridge between Twilio SMS/WhatsApp and your local environment opened in a cursor session, enabling automated responses using a local process (e.g., AI or script) via file-based communication and AutoHotkey scripting.
 
 ## Features
 - Receive SMS or WhatsApp messages via Twilio.
@@ -54,10 +54,15 @@ A bridge between Twilio SMS/WhatsApp and your local environment, enabling automa
      ```bash
      node watcher.js
      ```
+    
 
 ## Usage
 - Send an SMS or WhatsApp message to your Twilio number.
 - The message will be processed by your local environment (via the AHK script and the "Cursor" app), and the response will be sent back automatically.
+- If the message contains "Whatsapp" it will instead check to make sure the sms pipleine is functioning.
+
+## Note
+- Due to using free tier level of services with message limits, timeouts will occur within 15 seconds after a pending message is sent to the user after their message is sent with a command. Running lengthier or more complex commands will lead to a timeout. Twilio requires an interaction every 15 seconds or less. 
 
 ## Example Workflow
 1. User sends: `Can you check to see if my packages are up to date.?`
