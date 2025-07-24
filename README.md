@@ -42,7 +42,7 @@ A bridge between Twilio SMS/WhatsApp and your local environment opened in a curs
    TWILIO_PHONE_NUMBER_SMS=+1234567890
    TWILIO_PHONE_NUMBER_WHATSAPP=whatsapp:+1234567890
    ```
-3. **Configure output and input file paths in ahk script in cursor_input.ahk
+3. **Configure output and input** file paths in ahk script in cursor_input.ahk
    ```ahk
    InputFile :=enter path to .txt file 
    OutputFile :=enter path to .txt file
