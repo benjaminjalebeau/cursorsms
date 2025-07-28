@@ -5,6 +5,10 @@ A bridge between Twilio SMS/WhatsApp and your local environment opened in a curs
 ## Video Demonstration
 https://www.youtube.com/watch?v=bb4guJGzTUY
 
+
+https://github.com/user-attachments/assets/1f4d6835-7917-43de-b0be-ce457aba6324
+
+
 ## Features
 - Receive SMS or WhatsApp messages via Twilio.
 - Write incoming messages to `input.txt`.
