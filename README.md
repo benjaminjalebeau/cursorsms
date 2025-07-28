@@ -102,5 +102,3 @@ https://github.com/user-attachments/assets/1f4d6835-7917-43de-b0be-ce457aba6324
 - Make sure the "Cursor" window is open and accessible by AutoHotkey.
 - Check Twilio logs for webhook errors.
 
-## License
-ISC
