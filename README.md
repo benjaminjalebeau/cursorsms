@@ -2,6 +2,9 @@
 
 A bridge between Twilio SMS/WhatsApp and your local environment opened in a cursor session, enabling automated responses using a local process (e.g., AI or script) via file-based communication and AutoHotkey scripting.
 
+## Video Demonstration
+https://www.youtube.com/watch?v=bb4guJGzTUY
+
 ## Features
 - Receive SMS or WhatsApp messages via Twilio.
 - Write incoming messages to `input.txt`.
@@ -47,10 +50,18 @@ A bridge between Twilio SMS/WhatsApp and your local environment opened in a curs
    InputFile :=enter path to .txt file 
    OutputFile :=enter path to .txt file
    ```
-4. **Set up Twilio Webhook**:
-   - Point your Twilio SMS/WhatsApp webhook to `http://<your-server>:3000/sms` (use [ngrok](https://ngrok.com/) for local development).
+4. **Set up ngrok** (for local development):
+   - Install ngrok if you haven't already: https://ngrok.com/download
+   - Sign up for a free ngrok account and get your authtoken
+   - Authenticate ngrok: `ngrok config add-authtoken YOUR_AUTH_TOKEN`
+   - Expose your local server: `ngrok http 3000`
+   - Copy the HTTPS URL (e.g., `https://abc123.ngrok.io`)
+  
+5. **Set up Twilio Webhook**:
+   - Point your Twilio SMS/WhatsApp webhook to `https://your-ngrok-url.ngrok.io/sms`
+   - Use the HTTPS URL from the previous ngrok step
 
-5. **Start the services**:
+6. **Start the services**:
    - Start the Node.js server:
      ```bash
      node server.js
